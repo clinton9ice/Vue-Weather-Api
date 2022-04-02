@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4">
+  <div class="py-4" v-if="weatherHour">
     <h5 class="title p-3">Hourly</h5>
     <div class="weather-container" v-for="hours in weatherHour.forecastday" v-bind:key="hours">
 
@@ -21,6 +21,7 @@
 
 <script>
 let date = new Date().getDate();
+
 export default {
   props: {
     weatherHour: Array,
