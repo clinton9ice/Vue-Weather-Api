@@ -1,0 +1,41 @@
+.weather-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  max-width: 1000px;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .weather-days,
+  .weather-hours {
+    max-width: 100px;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 9px 6px #00000012;
+    margin: 0 0.5rem;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    min-height: 120px;
+    transition: all 200ms ease;
+    cursor: pointer;
+
+    .fa {
+      font-size: 1.5em;
+      color: var(--bs-gray-600);
+    }
+
+    &.active,
+    &:hover {
+      background-image: var(--gradient);
+      color: var(--white);
+    }
+  }
+}

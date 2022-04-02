@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("./fonts/Poppins-Regular.ttf");
+}
+
+body{
+    background-color: #f1f1f1;
+    font-family: "poppins", 'Helvetica Neue', sans-serif !important;
+}
+
+.form-control:focus{
+    box-shadow: 0 6px 6px lighten($purple, 30%) !important;
+}

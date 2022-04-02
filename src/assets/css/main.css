@@ -1,0 +1,90 @@
+:root {
+  --purple: #5e94fc;
+  --white: #fff;
+  --green: #55ea95;
+  --pink: #ff75a8;
+  --orange: #fff8ef;
+  --gradient: linear-gradient(86deg, #1cb9f2ad, #0a99db);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+
+body {
+  background-color: #f1f1f1;
+  font-family: "poppins", 'Helvetica Neue', sans-serif !important;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: 0 6px 6px #f4f8ff !important;
+          box-shadow: 0 6px 6px #f4f8ff !important;
+}
+
+.weather-container {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1000px;
+  overflow-x: auto;
+}
+
+.weather-container::-webkit-scrollbar {
+  height: 5px;
+}
+
+.weather-container .weather-days,
+.weather-container .weather-hours {
+  max-width: 100px;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 9px 6px #00000012;
+          box-shadow: 0 9px 6px #00000012;
+  margin: 0 0.5rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  min-height: 120px;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+
+.weather-container .weather-days .fa,
+.weather-container .weather-hours .fa {
+  font-size: 1.5em;
+  color: var(--bs-gray-600);
+}
+
+.weather-container .weather-days.active, .weather-container .weather-days:hover,
+.weather-container .weather-hours.active,
+.weather-container .weather-hours:hover {
+  background-image: var(--gradient);
+  color: var(--white);
+}
+/*# sourceMappingURL=main.css.map */
