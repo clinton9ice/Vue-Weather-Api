@@ -19,23 +19,22 @@ export default {
       weather: [],
       defaultSearch: "Asaba",
       searchCount: 8,
-      hosted: false,
-      httpsCall: "https://api.weatherapi.com/v1/current.json?",
-      ApiKey: "d8bd9b82587e4b81b67221333222803",
-      http: "http://api.weatherapi.com/v1/forecast.json?"
+      hosted: true,
+      httpsCall: "https://api.weatherapi.com/v1/forecast.json?",
+      ApiKey: "d8bd9b82587e4b81b67221333222803"
     };
   },
   methods: {
     async  fetchWeather(search = this.defaultSearch, count = this.searchCount) {
       let req = await fetch(
-        `${this.hosted? this.httpsCall: this.http}key=${this.ApiKey}&q=${search}&days=${count}&aqi=yes`
+        `${this.httpsCall}key=${this.ApiKey}&q=${search}&days=${count}&aqi=yes`
       );
       return req.json();
     },
 
     async searchVal(e){
       let req = await fetch(
-        `${this.hosted? this.httpsCall: this.http}key=${this.ApiKey}&q=${e}&days=${this.searchCount}`
+        `${this.httpsCall}key=${this.ApiKey}&q=${e}&days=${this.searchCount}`
       );
       this.weather = await req.json();
     }
